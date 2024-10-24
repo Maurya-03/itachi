@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Itachi Wallpaper</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: rgba(51, 51, 51, 1); /* Fully opaque */
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 2em;
+            position: relative;
+        }
+        footer {
+            background-color: rgba(51, 51, 51, 1);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 1.2em;
+        }
+        .parallax {
+            background-image: url('https://4kwallpapers.com/images/wallpapers/itachi-uchiha-naruto-amoled-black-background-minimal-art-3840x2160-6478.jpg');
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content {
+            position: relative;
+            height: 100vh;
+            padding: 50px;
+            text-align: center;
+        }
+        .content-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.144);
+            z-index: 1;
+        }
+        .content h1, .content p {
+            position: relative;
+            z-index: 2;
+            color: #333;
+        }
+        button.sign-in {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button.sign-in:hover {
+            background-color: #0056b3;
+        }
+        .drop-down {
+            position: absolute;
+            top: 120px;
+            left: 6px;
+            color: #333; /* White text */
+            background-color: #333; /* Blue background */
+            border: none;
+            border: radius 50%;;
+        }
+
+        .drop-down select option {
+            color: #000; /* Black text inside dropdown options */
+        }
+        .drop-down2 {
+            position: absolute;
+            top: 0px;
+            left: 80px;
+            color: #333; /* White text */
+            background-color: #333; /* Blue background */
+        }
+
+        .drop-down select option {
+            color: #000; /* Black text inside dropdown options */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        Tsukuyomi
+        <button class="sign-in" onclick="window.location.href='2.html';">Sign in</button>
+        <div class="drop-down">
+            <select id="menu" onchange="navigateMenu()">
+                <option value="">Menu</option>
+                <option value="home">Home</option>
+                <option value="about">About</option>
+            </select>
+            <div class="drop-down2">
+                <select id="more" onchange="navigateMore()">
+                    <option value="">More</option>
+                    <option value="other_options">other options</option>
+                    <option value="preferance">preferances</option>
+                </select>
+        </div>
+    </header>
+
+    <!-- Parallax Section -->
+    <div class="parallax"></div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <div class="content-overlay"></div>
+        <h1>Itachi Uchiha</h1>
+        <p>Itachi Uchiha is a character in the Naruto manga and anime series created by Masashi Kishimoto. Itachi is the older brother of Sasuke Uchiha, and is responsible for killing all the members of their clan, sparing only Sasuke.
+            <br><strong>Clan:</strong> Uchiha 
+            <br><strong>Powers and abilities:</strong> Pyrokinesis, Illusion, Power Mimicry, Superhuman speed
+            <br><strong>Played by:</strong> Hideo Ishikawa
+            <br><strong>Akatsuki partner:</strong> Kisame Hoshigaki (Rogue ninja)
+            <br><strong>Created by:</strong> Masashi Kishimoto
+            <br><strong>First appearance:</strong> Naruto chapter #139; 
+            <br><strong>Naruto episode #81:</strong> Return of the morning mist
+            <br><strong>Relatives:</strong> Sasuke Uchiha (younger brother); Sakura Haruno (sister-in-law); Sarada Uchiha (niece)</p>
+    </div>
+
+    <!-- Another Parallax Section -->
+    <div class="parallax"></div>
+
+    <!-- Footer Section -->
+    <footer>
+        Endless Nights
+    </footer>
+
+    <!-- Script Section -->
+    <script>
+        function navigateMenu() {
+            const menu = document.getElementById('menu');
+            const selectedValue = menu.value;
+            if (selectedValue === 'home') {
+                window.location.href = '3.html';
+            } else if (selectedValue === 'about') {
+                window.location.href = 'about.html';
+            }
+        }
+        function navigateMore() {
+            const menu = document.getElementById('more');
+            const selectedValue = menu.value;
+            if (selectedValue === 'other_options') {
+                window.location.href = 'option.html';
+            } else if (selectedValue === 'preferance') {
+                window.location.href = 'preferance.html';
+            }
+        }
+    </script>
+
+</body>
+</html>
